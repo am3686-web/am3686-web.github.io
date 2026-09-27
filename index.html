@@ -57,7 +57,6 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 10px;
   }
-  /* ---- Skills ---- */
   .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +71,6 @@
     border-radius: 20px;
     font-size: 0.95em;
   }
-  /* ---- Projects ---- */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -94,6 +92,11 @@
   .project-card h3 {
     margin: 0 0 8px;
     color: var(--heading);
+  }
+  .project-card .tools {
+    font-size: 0.85em;
+    color: #8b949e;
+    margin: 0 0 10px;
   }
   .project-card p {
     margin: 0 0 12px;
@@ -119,28 +122,13 @@
 <body>
 
 <header>
-  <!-- ============================================= -->
-  <!-- FILL IN HERE: your headshot photo              -->
-  <!-- Put your photo in the "images" folder next to  -->
-  <!-- this file (e.g. images/headshot.jpg) and set   -->
-  <!-- the src below to that path. Delete this <img>  -->
-  <!-- line entirely if you don't want a photo.        -->
-  <!-- ============================================= -->
   <img class="headshot" src="headshot.jpg" alt="Your headshot">
   <h1>Arnav Moorjani</h1>
-  <!-- ============================================= -->
-  <!-- FILL IN HERE: your 1-line personal statement   -->
-  <!-- ============================================= -->
   <p class="statement">My name is Arnav, and I am a passionate and curious Rutgers student, focusing on solving real-world problems through supply chain, data, and hard work!</p>
 </header>
 
 <main>
 
-  <!-- ============================================= -->
-  <!-- SKILLS SHOWCASE                                -->
-  <!-- Add/remove <span class="skill-pill"> items     -->
-  <!-- below to list your skills.                     -->
-  <!-- ============================================= -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-list">
@@ -150,46 +138,42 @@
       <span class="skill-pill">Microsoft Excel</span>
       <span class="skill-pill">Alteryx</span>
       <span class="skill-pill">Oracle</span>
-      <!-- Add more skill-pill spans here as needed -->
+      <span class="skill-pill">Excel Office Scripts</span>
+      <span class="skill-pill">Power Automate</span>
+      <span class="skill-pill">Data Analytics</span>
+      <span class="skill-pill">Supply Chain Management</span>
+      <span class="skill-pill">SharePoint</span>
+      <span class="skill-pill">Office 365</span>
     </div>
   </section>
 
-  <!-- ============================================= -->
-  <!-- PROJECTS SECTION                               -->
-  <!-- Copy/paste a <div class="project-card"> block  -->
-  <!-- for each project you want to showcase.         -->
-  <!--                                                 -->
-  <!-- To add an image/screenshot for a project:       -->
-  <!--   1. Put the image file in an "images" folder   -->
-  <!--      next to this index.html (e.g. images/      -->
-  <!--      project1.png)                              -->
-  <!--   2. Set the <img src="..."> below to that path -->
-  <!--      e.g. src="images/project1.png"             -->
-  <!--   If you don't have an image yet, just delete   -->
-  <!--   the <img> line for that card.                 -->
-  <!-- ============================================= -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
 
       <div class="project-card">
-        <!-- EDIT ME: replace src with your project image path, or delete this line -->
-        <img src="images/project1.png" alt="Project 1 screenshot">
-        <h3>EDIT ME: Project Title</h3>
-        <p>EDIT ME: A short description of what this project does and what you used to build it.</p>
-        <a href="https://github.com/yourusername/your-repo" target="_blank">GitHub Repo</a>
-        <a href="#" target="_blank">Live Demo</a>
+        <h3>Invoice Reconciliation Automation</h3>
+        <p class="tools">Excel Office Scripts</p>
+        <p>Built a script to auto-format and summarize a 10-tab invoice reconciliation report for Accounts Payable review, cutting processing time from 15 minutes to seconds.</p>
       </div>
 
       <div class="project-card">
-        <img src="images/project2.png" alt="Project 2 screenshot">
-        <h3>EDIT ME: Project Title</h3>
-        <p>EDIT ME: A short description of what this project does and what you used to build it.</p>
-        <a href="https://github.com/yourusername/your-repo" target="_blank">GitHub Repo</a>
-        <a href="#" target="_blank">Live Demo</a>
+        <h3>ERP Payment & PO Analytics</h3>
+        <p class="tools">Alteryx, Jaggaer, Oracle</p>
+        <p>Reconciled ERP data across ~50 recurring reports using Alteryx, identifying an average of 750 unclosed PO mismatches and 300 invoice discrepancies per cycle. Analyzed ~5,600 payments across engagements to surface inconsistent payment terms, supporting a cash-flow optimization initiative.</p>
       </div>
 
-      <!-- Copy the block above to add more project cards -->
+      <div class="project-card">
+        <h3>University-Wide PO Visualization Report</h3>
+        <p class="tools">Excel, SharePoint</p>
+        <p>Produced a monthly report visualizing ~200,000 purchase orders (~$1.9–2B) across 7 university campuses, supporting procurement leadership decision-making.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>YMCA Facility Energy-Use Assessment</h3>
+        <p class="tools">Data Analysis, Cost Modeling</p>
+        <p>Led a facility-wide energy-use assessment with a 5-person consulting team, analyzing utility bills and equipment patterns and building preliminary savings models that identified $4,500+ in potential annual savings.</p>
+      </div>
 
     </div>
   </section>
